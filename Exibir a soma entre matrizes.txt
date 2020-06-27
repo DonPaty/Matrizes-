@@ -1,0 +1,56 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+/* 5) Fazer um programa para ler duas matrizes de números inteiros A 
+ e B, contendo de M linhas e N colunas cada. Depois, gerar uma 
+terceira matriz C onde cada elemento desta é a soma dos elementos 
+correspondentes das matrizes originais.
+Imprimir na tela a matriz gerada.
+
+Entrada:
+A entrada contém os valores de M e N, depois os valores da primeira matriz A, 
+depois os valores da segunda matriz B, conforme exemplo.
+
+Saída:
+A saída contém os valores da matriz gerada C, conforme exemplo.
+ */
+
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+	
+	int N = sc.nextInt();
+	int M = sc.nextInt();
+	int[][] mat1 = new int[N][M];
+	
+	for (int i=0; i<N; i++) {
+		for( int j=0; j<M; j++) {
+			mat1[i][j] = sc.nextInt();
+		}
+	}
+	int[][] mat2 = new int[N][M];
+	
+	for (int i=0; i<N; i++) {
+		for( int j=0; j<M; j++) {
+			mat2[i][j] = sc.nextInt();
+		}
+	}
+	
+int [][]mat3 = new int[N][M];
+	
+	for (int i=0; i<N; i++) {
+		for( int j=0; j<M; j++) {
+			mat3[i][j] = mat1[i][j] + mat2[i][j];
+		 
+	System.out.print(mat3[i][j] + " ");
+		}
+	System.out.println();
+	}
+	
+	sc.close();
+	}
+}
